@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Redirect, Switch, Router } from "react-router-dom";
-import { Provider } from "react-redux";
 import NavbarRouter from "./NavbarRouter";
 // import NotFoundComponent from "components/Global/NotFoundComponent";
 import history from "configs/history";

@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { DashboardOutlined, HistoryOutlined } from "@material-ui/icons";
 import Sidebar from "components/Global/NEW_Sidebar";
 import Header from "components/Global/NEW_Header";
-import { withTranslation } from "react-i18next";
 
 const useStyles = makeStyles(() => ({
   layout: {
@@ -14,19 +13,6 @@ const useStyles = makeStyles(() => ({
 
 const Layout = ({ children }) => {
   const classes = useStyles();
-
-  const [user, setUser] = React.useState({
-    username: "",
-    email: "",
-    status_kyc: "",
-  });
-
-  // const fetchUsers = () => {
-  //   setUser(getUserLogin());
-  // };
-  // React.useEffect(() => {
-  //   fetchUsers();
-  // }, []);
 
   const titleAndSidebar = [
     {

@@ -4,12 +4,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Collapse,
-  IconButton,
-  SwipeableDrawer,
   Drawer,
 } from "@material-ui/core";
-import { DashboardOutlined, HistoryOutlined } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import constant from "configs/constants";
 import handling from "utils/handling";
@@ -80,13 +76,6 @@ const useStyles = makeStyles((theme) => ({
 const Sidebar = ({ sidebar }) => {
   const classes = useStyles();
 
-  const side = "left";
-  const [click, setClick] = React.useState(true);
-  const [state, setState] = React.useState({
-    left: false,
-  });
-  // const [user, setUser] = React.useState(getUserLogin());
-
   return (
     <Drawer
       className={classes.drawer}
@@ -95,11 +84,10 @@ const Sidebar = ({ sidebar }) => {
       }}
       open={true}
       variant="permanent"
-      // onClose={toggleDrawer("left", false)}
-      // onOpen={toggleDrawer("left", true)}
     >
       <div className={classes.toolbar}>
         <img
+          alt="xfers-icon"
           src={`${constant.PREFIX_IMAGE}/icon/xfers.svg`}
           style={{ width: 90, paddingTop: 25, textAlign: "center" }}
         />
@@ -133,6 +121,8 @@ const Sidebar = ({ sidebar }) => {
                 </ListItem>
               </div>
             );
+          } else {
+            return null;
           }
         })}
       </List>
