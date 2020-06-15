@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
-import 'react-datepicker/dist/react-datepicker.css';
-import RouterFlow from './components/Router/Router';
+import React, { Component } from "react";
+import "./App.css";
+import "react-datepicker/dist/react-datepicker.css";
+import RouterFlow from "./components/Router/Router";
 
 class App extends Component {
-    render() {
-        return (
-            <div>
-                <RouterFlow />
-            </div>
-        );
-    };
+  render() {
+    return (
+      <div>
+        <RouterFlow />
+      </div>
+    );
+  }
 }
 
 export default App;
