@@ -1,19 +1,18 @@
-import Cookies from 'universal-cookie';
+import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
 const getDefaultCurrency = () => {
-    return cookies.get('currency') || 'idr';
+  return cookies.get("currency") || "idr";
 };
 
 const setDefaultCurrency = (currency) => {
-    cookies.set('currency', currency, { path: '/' });
+  cookies.set("currency", currency, { path: "/" });
 };
 
-const formatCurrency = data => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(data);
+const formatCurrency = (data) =>
+  new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(
+    data
+  );
 
-export {
-    getDefaultCurrency,
-    setDefaultCurrency,
-    formatCurrency
-};
+export { getDefaultCurrency, setDefaultCurrency, formatCurrency };
