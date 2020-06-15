@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Router } from "react-router-dom";
-import { withRouter } from "react-router";
-import { Grid } from "@material-ui/core";
 import Layout from "components/Global/NEW_Layout";
 import Dashboard from "components/Pages/NEW_Dashboard";
 import Transactions from "components/Pages/NEW_Transactions";
