@@ -6,6 +6,7 @@ true:
   branch: master
 deploy:
   provider: gae
+  keyfile:
   project: thesis-281217
 before_install:
 - openssl aes-256-cbc -K $encrypted_2fd045226a67_key -iv $encrypted_2fd045226a67_iv
