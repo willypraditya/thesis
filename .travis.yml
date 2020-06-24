@@ -1,11 +1,15 @@
 language: node_js
 node_js: stable
+cache:
+  directories:
+  - node_modules
 script:
-- npm run build
+  - npm run build
 true:
   branch: master
 deploy:
-  skip_cleanup: true
   provider: gae
   keyfile: client-secret.json
   project: thesis-281217
+  skip_cleanup: true
+  local_dir: build
