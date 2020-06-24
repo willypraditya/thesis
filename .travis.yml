@@ -5,6 +5,7 @@ script:
 true:
   branch: master
 deploy:
+  skip_cleanup: true
   provider: gae
   keyfile: client-secret.json
   project: thesis-281217
