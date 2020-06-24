@@ -7,9 +7,9 @@ handlers:
   - url: /static/css/(.*)
     static_files: build/static/css/\1
     upload: build/static/css/(.*)
-  - url: /images/icon/(.*\.svg)
+  - url: /images/icon/(.*)
     static_files: build/images/icon/\1
-    upload: build/images/icon/(.*\.svg)
+    upload: build/images/icon/(.*)
   - url: /(.*\.(json|ico))$
     static_files: build/\1
     upload: build/.*\.(json|ico)$
