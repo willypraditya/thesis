@@ -29,9 +29,7 @@
     "universal-cookie": "4.0.2"
   },
   "scripts": {
-    "start": "serve -s build",
-    "prestart": "npm install -g serve",
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
