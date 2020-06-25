@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import constant from "configs/constants";
 
-import { Grid, Container, Paper } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   leftContainer: {
