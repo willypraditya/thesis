@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import constant from "configs/constants";
 
 import { Grid, Container, Paper } from "@material-ui/core";
-import Carousel from "react-material-ui-carousel";
 
 const useStyles = makeStyles((theme) => ({
   leftContainer: {
@@ -34,17 +33,6 @@ const useStyles = makeStyles((theme) => ({
 const Layout = ({ formContent }) => {
   const classes = useStyles();
 
-  const carousel = [
-    {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
-    },
-    {
-      name: "Random Name #2",
-      description: "Hello World!",
-    },
-  ];
-
   return (
     <Grid container className={classes.root}>
       <Grid item xs={9}>
@@ -53,14 +41,14 @@ const Layout = ({ formContent }) => {
             <Grid item xs={1} />
             <Grid item xs={10}>
               <div className={classes.carousel}>
-                <Carousel>
+                {/* <Carousel>
                   {carousel.map((item) => (
                     <Paper className={classes.carouselContent}>
                       <h2>{item.name}</h2>
                       <h2>{item.description}</h2>
                     </Paper>
                   ))}
-                </Carousel>
+                </Carousel> */}
               </div>
             </Grid>
             <Grid item xs={1} />
