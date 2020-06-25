@@ -43,6 +43,7 @@ const LoginForm = ({ onClickLogin }) => {
         <Grid item>
           <Typography className={classes.formLabel}>Email</Typography>
           <TextField
+            data-cy="email-input"
             variant="outlined"
             fullWidth={true}
             label="Enter your Email Address"
@@ -52,6 +53,8 @@ const LoginForm = ({ onClickLogin }) => {
         <Grid item>
           <Typography className={classes.formLabel}>PIN</Typography>
           <TextField
+            type="password"
+            data-cy="pin-input"
             variant="outlined"
             fullWidth={true}
             label="Enter PIN"
@@ -70,6 +73,7 @@ const LoginForm = ({ onClickLogin }) => {
       <Grid container justify="flex-end">
         <Grid item>
           <Button
+            data-cy="login-button"
             variant="contained"
             className={classes.loginButton}
             onClick={onClickLogin}

@@ -6,6 +6,8 @@ import Layout from "../components/layout";
 import LoginForm from "./components/loginForm";
 import VerifyOtpForm from "../components/verifyOtpForm";
 
+import handling from "utils/handling";
+
 const useStyles = makeStyles((theme) => ({
   container: {
     padding: "30px 30px 10px 30px",
@@ -36,11 +38,15 @@ const Login = () => {
     setStep(1);
   };
 
+  const onClickVerify = () => {
+    handling.redirectUrl("/dashboard");
+  };
+
   const renderForm = () => {
     if (step === 0) {
       return <LoginForm onClickLogin={onClickLogin} />;
     } else {
-      return <VerifyOtpForm />;
+      return <VerifyOtpForm onClickVerify={onClickVerify} />;
     }
   };
 
