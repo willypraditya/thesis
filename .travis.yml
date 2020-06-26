@@ -5,15 +5,15 @@ cache:
   - node_modules
 script:
   - npm run cypress:test
-true:
-  branch: master
 deploy:
   provider: gae
   keyfile: client-secret.json
   project: thesis-281217
   skip_cleanup: true
   local_dir: build
-stages:
-  - name: deploy
-    # require the branch name to be master (note for PRs this is the base branch name)
-    if: branch = master
+  on:
+    branch: master
+# stages:
+#   - name: deploy
+#     # require the branch name to be master (note for PRs this is the base branch name)
+#     if: branch = master
