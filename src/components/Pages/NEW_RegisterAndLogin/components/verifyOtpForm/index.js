@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const VerifyOtpForm = () => {
+const VerifyOtpForm = ({ onClickVerify }) => {
   const classes = useStyles();
 
   const [timer, setTimer] = useState(180000);
@@ -83,6 +83,7 @@ const VerifyOtpForm = () => {
       </Container>
       <Typography className={classes.formLabel}>6-Digit Number</Typography>
       <TextField
+        data-cy="otp-input"
         variant="outlined"
         fullWidth={true}
         label="Enter the 6-Digit Number"
@@ -99,7 +100,12 @@ const VerifyOtpForm = () => {
       </div>
       <Grid container justify="flex-end">
         <Grid item>
-          <Button variant="contained" className={classes.verifyButton}>
+          <Button
+            data-cy="verify-otp-button"
+            variant="contained"
+            className={classes.verifyButton}
+            onClick={onClickVerify}
+          >
             Verify Now
           </Button>
         </Grid>
