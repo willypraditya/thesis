@@ -3,17 +3,17 @@ node_js: stable
 cache:
   directories:
   - node_modules
-script:
-  - npm run cypress:test
-deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: thesis-281217
-  skip_cleanup: true
-  local_dir: build
-  on:
-    branch: master
-# stages:
-#   - name: deploy
-#     # require the branch name to be master (note for PRs this is the base branch name)
-#     if: branch = master
+jobs:
+  include:
+    - stage: "test"
+      name: "Run E2E Test"
+      script: npm run cypress:test
+    - stage: deploy
+      if: branch = master
+      name: "Deploy to GAE"
+      deploy:
+        provider: gae
+        keyfile: client-secret.json
+        project: thesis-281217
+        skip_cleanup: true
+        local_dir: build
