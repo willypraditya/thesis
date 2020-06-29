@@ -114,7 +114,7 @@ const Dashboard = () => {
       type: "incoming",
     },
     {
-      name: "Willy Praditya",
+      name: "Wuilly Praditya",
       date: "Today",
       amount: "51,500,000.00",
       type: "outgoing",
