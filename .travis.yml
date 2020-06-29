@@ -18,7 +18,7 @@ jobs:
   - stage: deploy
     if: branch = master and type = push
     name: Deploy to GAE
-    script: skip
+    script: npm run build
     deploy:
       provider: gae
       keyfile: client-secret.json
