@@ -11,8 +11,6 @@ deploy:
   project: thesis-281217
   skip_cleanup: true
   local_dir: build
-  on:
-    branch: master
 jobs:
   include:
     - stage: "test"
@@ -20,10 +18,6 @@ jobs:
       script: npm run cypress:test
     - stage: deploy
       name: "Deploy to GAE"
-stages:
-  - test
-  - deploy
-
 # stages:
 #   - 
 #   - name: deploy
