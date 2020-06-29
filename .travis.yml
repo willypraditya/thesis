@@ -10,6 +10,7 @@ branches:
 jobs:
   include:
   - stage: test
+    if: branch = master and type = pull_request
     name: Run E2E Test
     script: 
       - npm install
