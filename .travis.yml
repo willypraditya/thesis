@@ -3,8 +3,6 @@ node_js: stable
 cache:
   directories:
   - node_modules
-# script:
-#   - npm run cypress:test
 deploy:
   provider: gae
   keyfile: client-secret.json
@@ -18,8 +16,3 @@ jobs:
       script: npm run cypress:test
     - stage: deploy
       name: "Deploy to GAE"
-# stages:
-#   - 
-#   - name: deploy
-#     # require the branch name to be master (note for PRs this is the base branch name)
-#     if: branch = master
