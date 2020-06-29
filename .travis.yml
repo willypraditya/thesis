@@ -11,6 +11,7 @@ jobs:
     - stage: deploy
       if: branch = master
       name: "Deploy to GAE"
+      script: skip
       deploy:
         provider: gae
         keyfile: client-secret.json
