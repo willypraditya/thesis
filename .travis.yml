@@ -13,7 +13,7 @@ jobs:
       script: npm run cypress:test
     - stage: deploy
       name: "Deploy to GAE"
-      script: skip
+      script: if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "PR skip deploy"; else skip; fi
       deploy:
         provider: gae
         keyfile: client-secret.json
