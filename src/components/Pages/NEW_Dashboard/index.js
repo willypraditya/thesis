@@ -108,7 +108,7 @@ const Dashboard = () => {
 
   const recentTransaction = [
     {
-      name: "Willy Praditya",
+      name: "Wuilly Praditya",
       date: "Today",
       amount: "20,000,000.10",
       type: "incoming",
