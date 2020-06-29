@@ -6,19 +6,24 @@ cache:
 branches:
   only:
   - master
+install:
+- npm install
 jobs:
   include:
-    - stage: "test"
-      name: "Run E2E Test"
-      script: npm run cypress:test
-    - stage: deploy
-      name: "Deploy to GAE"
-      script: if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then echo "PR skip deploy"; else skip; fi
-      deploy:
-        provider: gae
-        keyfile: client-secret.json
-        project: thesis-281217
-        skip_cleanup: true
-        local_dir: build
-        on:
-          branch: master
+  - stage: test
+    name: Run E2E Test
+    script: npm run cypress:test
+  - stage: deploy
+    name: Deploy to GAE
+    script: skip
+    deploy:
+      provider: gae
+      keyfile: client-secret.json
+      project: thesis-281217
+      skip_cleanup: true
+      local_dir: build
+      on:
+        branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_2fd045226a67_key -iv $encrypted_2fd045226a67_iv
+  -in client-secret.json.enc -out client-secret.json -d
