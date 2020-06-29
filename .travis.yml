@@ -7,14 +7,14 @@ cache:
 branches:
   only:
   - master
-install:
-  - npm install
-  - cypress install
 jobs:
   include:
   - stage: test
     name: Run E2E Test
-    script: npm run cypress:test
+    script: 
+      - npm install
+      - cypress install
+      - npm run cypress:test
   - stage: deploy
     if: branch = master and type = push
     name: Deploy to GAE
