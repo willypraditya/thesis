@@ -12,6 +12,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { FiberManualRecord } from "@material-ui/icons";
+import handling from "utils/handling";
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -162,7 +163,13 @@ const NotificationPopup = ({ anchorEl, handleClose }) => {
             <Divider orientation="vertical" />
           </div>
           <Grid item className={classes.buttonGrid}>
-            <Button className={classes.button}>View All</Button>
+            <Button
+              data-cy="view-notifications-button"
+              className={classes.button}
+              onClick={() => handling.redirectUrl("/dashboard/notifications")}
+            >
+              View All
+            </Button>
           </Grid>
         </Grid>
       </div>

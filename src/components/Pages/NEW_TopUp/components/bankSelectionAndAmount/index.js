@@ -109,7 +109,10 @@ const BankSelectionAndAmount = ({ nextStep }) => {
   return (
     <div>
       <Paper elevation={0} className={classes.paper}>
-        <Typography className={classes.bankSelectionAndAmountTitle}>
+        <Typography
+          variant="h1"
+          className={classes.bankSelectionAndAmountTitle}
+        >
           Bank Selection & Amount
         </Typography>
         <div className={classes.divider}>
@@ -177,7 +180,11 @@ const BankSelectionAndAmount = ({ nextStep }) => {
                         } */}
           </Grid>
           <Grid item xs={6}>
-            <Button className={classes.nextButton} onClick={nextStep}>
+            <Button
+              data-cy="next-button"
+              className={classes.nextButton}
+              onClick={nextStep}
+            >
               Next
             </Button>
           </Grid>

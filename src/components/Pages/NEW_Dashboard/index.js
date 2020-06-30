@@ -153,6 +153,7 @@ const Dashboard = () => {
               <Button
                 variant="contained"
                 className={classes.sendButton}
+                data-cy="send-button"
                 onClick={() => handling.redirectUrl("/dashboard/send")}
               >
                 <CallMade className={classes.buttonIcon} />
@@ -161,6 +162,7 @@ const Dashboard = () => {
               <Button
                 variant="contained"
                 className={classes.topUpButton}
+                data-cy="top-up-button"
                 onClick={() => handling.redirectUrl("/dashboard/top-up")}
               >
                 <Add className={classes.buttonIcon} />

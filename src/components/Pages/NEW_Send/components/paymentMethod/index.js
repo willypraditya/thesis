@@ -102,7 +102,7 @@ const PaymentMethod = ({
   return (
     <div>
       <Paper elevation={0} className={classes.paper}>
-        <Typography className={classes.paymentMethodTitle}>
+        <Typography variant="h1" className={classes.paymentMethodTitle}>
           Payment Method
         </Typography>
         <div className={classes.divider}>
@@ -220,7 +220,11 @@ const PaymentMethod = ({
             )}
           </Grid>
           <Grid item xs={6}>
-            <Button className={classes.nextButton} onClick={nextStep}>
+            <Button
+              data-cy="next-button"
+              className={classes.nextButton}
+              onClick={nextStep}
+            >
               Next
             </Button>
           </Grid>

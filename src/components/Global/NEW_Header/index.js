@@ -105,7 +105,10 @@ const Header = ({ title }) => {
               </IconButton>
             </Grid>
             <Grid item>
-              <IconButton onClick={handleNotificationClick}>
+              <IconButton
+                data-cy="notifications-button"
+                onClick={handleNotificationClick}
+              >
                 <Badge
                   classes={{ badge: classes.customBadge }}
                   overlap="circle"

@@ -9,6 +9,6 @@ describe("Login Page Test", () => {
   it("Verify OTP", () => {
     cy.get("[data-cy=otp-input]").type("260698");
     cy.get("[data-cy=verify-otp-button]").click();
-    cy.url().should("include", "/dashboard");
+    cy.url().should("eq", "http://localhost:3000/dashboard");
   });
 });

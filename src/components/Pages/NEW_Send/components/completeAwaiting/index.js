@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography, Button, Divider, Paper } from "@material-ui/core";
 import { QueryBuilder } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
+import handling from "utils/handling";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -52,7 +53,9 @@ const CompleteAwaiting = () => {
   return (
     <div>
       <Paper elevation={0} className={classes.paper}>
-        <Typography className={classes.completeTitle}>Complete</Typography>
+        <Typography variant="h1" className={classes.completeTitle}>
+          Complete
+        </Typography>
         <div className={classes.divider}>
           <Divider />
         </div>
@@ -79,7 +82,11 @@ const CompleteAwaiting = () => {
         <Grid container justify="space-between" style={{ height: "100%" }}>
           <Grid item xs={6}></Grid>
           <Grid item xs={6}>
-            <Button className={classes.returnButton}>
+            <Button
+              data-cy="return-button"
+              className={classes.returnButton}
+              onClick={() => handling.redirectUrl("/dashboard")}
+            >
               Return to Transactions
             </Button>
           </Grid>
