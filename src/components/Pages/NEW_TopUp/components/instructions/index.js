@@ -86,7 +86,7 @@ const Instructions = ({ nextStep }) => {
   return (
     <div>
       <Paper elevation={0} className={classes.paper}>
-        <Typography className={classes.instructionsTitle}>
+        <Typography variant="h1" className={classes.instructionsTitle}>
           Instructions
         </Typography>
         <div className={classes.divider}>
@@ -230,7 +230,11 @@ const Instructions = ({ nextStep }) => {
             <Button className={classes.cancelButton}>Cancel Payment</Button>
           </Grid>
           <Grid item>
-            <Button className={classes.nextButton} onClick={nextStep}>
+            <Button
+              data-cy="next-button"
+              className={classes.nextButton}
+              onClick={nextStep}
+            >
               I've Transferred
             </Button>
           </Grid>

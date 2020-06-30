@@ -122,7 +122,7 @@ const TransferDetails = ({ nextStep }) => {
   return (
     <div>
       <Paper elevation={0} className={classes.paper}>
-        <Typography className={classes.transferDetailsTitle}>
+        <Typography variant="h1" className={classes.transferDetailsTitle}>
           Transfer Details
         </Typography>
         <div className={classes.divider}>
@@ -222,7 +222,11 @@ const TransferDetails = ({ nextStep }) => {
             )}
           </Grid>
           <Grid item xs={6}>
-            <Button className={classes.nextButton} onClick={nextStep}>
+            <Button
+              data-cy="next-button"
+              className={classes.nextButton}
+              onClick={nextStep}
+            >
               Next
             </Button>
           </Grid>
