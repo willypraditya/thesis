@@ -120,7 +120,7 @@ const Dashboard = () => {
       type: "outgoing",
     },
     {
-      name: "Willy Praditya",
+      name: "Wuilly",
       date: "Yesterday",
       amount: "20,000,000.10",
       type: "incoming",
