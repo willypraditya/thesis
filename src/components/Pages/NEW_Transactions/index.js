@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 20,
   },
   transactionHistoryTitle: {
+    fontSize: 16,
     fontWeight: 700,
   },
   searchLogo: {
@@ -59,7 +60,7 @@ const Transactions = () => {
         className={classes.transactionHistoryHeader}
       >
         <Grid item>
-          <Typography className={classes.transactionHistoryTitle}>
+          <Typography variant="h1" className={classes.transactionHistoryTitle}>
             Transaction History
           </Typography>
         </Grid>

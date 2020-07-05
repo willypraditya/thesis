@@ -106,7 +106,7 @@ const TransactionDetails = (matchProps) => {
   return (
     <div>
       <Paper elevation={0} className={classes.transactionDetailsHeader}>
-        <Typography className={classes.transactionsDetailsId}>
+        <Typography variant="h1" className={classes.transactionsDetailsId}>
           ID {matchProps.match.params.id}
         </Typography>
         <Grid
