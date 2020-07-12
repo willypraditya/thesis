@@ -16,6 +16,7 @@ jobs:
       - npm install
       - cypress install
       - npm run cypress:test
+      - npm run build
   - stage: deploy
     if: branch = master and type = push
     name: Deploy to GAE
