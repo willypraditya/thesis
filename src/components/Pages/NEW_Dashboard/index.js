@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
-  console.log("Deployment 1");
+  console.log("Test without build script in deploy to gae step");
 
   const recentTransaction = [
     {
