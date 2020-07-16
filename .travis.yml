@@ -11,7 +11,7 @@ jobs:
   include:
   - stage: test
     if: branch = master and type = pull_request
-    name: Run E2E Test and Build
+    name: Run E2E Test and Build Test
     script: 
       - npm install
       - cypress install
