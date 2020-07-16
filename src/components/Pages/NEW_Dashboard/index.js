@@ -106,11 +106,11 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
-  console.log("Test without build script in deploy to gae step");
+  console.log("Concurrent 2");
 
   const recentTransaction = [
     {
-      name: "Wuilly Praditya",
+      name: "Concurrent 2",
       date: "Today",
       amount: "20,000,000.10",
       type: "incoming",
