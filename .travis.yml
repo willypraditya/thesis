@@ -11,19 +11,15 @@ jobs:
   include:
   - stage: test
     if: branch = master and type = pull_request
-    name: Run E2E Test
+    name: Run E2E Test and Build Test
     script: 
       - npm install
       - cypress install
       - npm run cypress:test
-  - stage: build
-    if: branch = master and type = pull_request
-    name: Build
-    script: npm run build
+      - npm run build
   - stage: deploy
     if: branch = master and type = push
     name: Deploy to GAE
-    script: npm run build
     deploy:
       provider: gae
       keyfile: client-secret.json
