@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
-  console.log("Concurrent 1");
+  console.log("Final Test 1");
 
   const recentTransaction = [
     {
