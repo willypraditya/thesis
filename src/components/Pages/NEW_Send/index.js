@@ -12,6 +12,8 @@ const Send = () => {
 
   const [step, setStep] = useState(0);
 
+  console.log("Multi Test 1");
+
   const nextStep = () => {
     setStep((prevState) => prevState + 1);
   };
