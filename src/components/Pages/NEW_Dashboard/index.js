@@ -106,6 +106,8 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
+  console.log("Multiple Test 1");
+
   const recentTransaction = [
     {
       name: "Wuilly Praditya Thesis",
