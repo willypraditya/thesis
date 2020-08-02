@@ -110,7 +110,7 @@ const Dashboard = () => {
 
   const recentTransaction = [
     {
-      name: "Concurrent 1",
+      name: "Wuilly Praditya Thesis",
       date: "Today",
       amount: "20,000,000.10",
       type: "incoming",
