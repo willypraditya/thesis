@@ -170,6 +170,15 @@ const Dashboard = () => {
                 <Add className={classes.buttonIcon} />
                 Top-Up
               </Button>
+              <Button
+                variant="contained"
+                className={classes.topUpButton}
+                // data-cy="top-up-button"
+                onClick={() => console.log("refund clicked")}
+              >
+                <Add className={classes.buttonIcon} />
+                Refund
+              </Button>
             </div>
           </Grid>
         </Grid>
