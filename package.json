@@ -16,7 +16,7 @@
     "fg-loadcss": "2.1.0",
     "history": "4.9.0",
     "moment": "2.24.0",
-    "papaparse": "5.0.2",
+    "papaparse": "5.2.0",
     "react": "16.8.6",
     "react-chartjs-2": "^2.9.0",
     "react-csv-reader": "1.2.2",
